@@ -1,0 +1,229 @@
+:root {
+  --bg-1: #f8fafc;
+  --bg-2: #eef2f7;
+  --card: rgba(255, 255, 255, 0.88);
+  --card-strong: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #10efff;
+  --accent-soft: #00fff2;
+  --blue: #4f6fa5;
+  --line: #e5eaf2;
+  --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 42px 24px 70px;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, #ffffff 0%, #f8fafc 35%, #eef2f7 100%);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+body,
+td,
+th,
+tr,
+p,
+a,
+li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+p,
+li {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #334155;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.name {
+  padding-top: 0;
+  margin: 0;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: #0f172a;
+}
+
+body > table {
+  margin-top: 12px;
+}
+
+body > table > tbody > tr > td > table:first-of-type {
+  background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  padding: 14px 8px;
+  margin-bottom: 28px;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 22px;
+  backdrop-filter: blur(8px);
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) td {
+  padding: 26px 28px !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:first-child p:nth-of-type(2) {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: var(--blue) !important;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 10px auto 0 !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:first-child p:nth-of-type(3) {
+  margin-top: 34px !important;
+  font-size: 18px !important;
+  line-height: 1.95 !important;
+  color: #475569 !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:first-child p:last-of-type a {
+  display: inline-block !important;
+  padding: 14px 30px !important;
+  border-radius: 14px !important;
+  border: none !important;
+  background: linear-gradient(135deg, var(--accent), #d7a631) !important;
+  color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 12px 26px rgba(201, 151, 26, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:first-child p:last-of-type a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(201, 151, 26, 0.28);
+}
+
+h2 {
+  position: relative;
+  padding-bottom: 16px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+}
+
+ul {
+  margin: 10px 0 0 0;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+img[alt="Photo of Omer Altintas"] {
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.15) !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:last-child {
+  vertical-align: middle !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:last-child img {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 24px 16px 50px;
+  }
+
+  .name {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type td:first-child p:nth-of-type(2),
+  body > table > tbody > tr > td > table:first-of-type td:first-child p:nth-of-type(3),
+  p,
+  li {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  body > table > tbody > tr > td > table:first-of-type tr,
+  body > table > tbody > tr > td > table:first-of-type td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type td:first-child p,
+  body > table > tbody > tr > td > table:first-of-type td:first-child .name {
+    text-align: left !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type td:last-child img {
+    margin: 24px auto 0;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) td {
+    padding: 22px 20px !important;
+  }
+}
